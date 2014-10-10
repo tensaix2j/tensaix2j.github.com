@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<style>
+			html {
+				background-color: #eee;
+			}
+			.fxsignal {
+				border:0px;
+				width:100%;
+			}
+			.fxsliverate {
+				height:300px;
+			}
+			.fxsshort {
+				height:200px;
+			}
+			.fxslong {
+				height:100px;
+			}
+			
+			.maintable {
+				width:100%;
+
+			}
+			.tr_fxsignal {
+				height:200px;
+			}
+			.maintable td {
+				vertical-align: top;
+				background-color: #eee;
+			}
+		</style>
+
+
+	</head>
+
+	<body>
+		
+		<table class="maintable">
+			<thead>
+				<tr>
+					<th width="11%"></th>
+					<th width="11%"></th>
+					<th width="11%"></th>
+					<th width="11%"></th>
+					
+					<th width="15%"></th>
+					<th></th>	
+				
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="tr_fxsignal">	
+					<td>
+						<iframe src="http://fxsignals.fxmarketleaders.com/liverates.aspx" class="fxsignal fxsliverate" id="fxsliverate"></iframe>
+						
+					
+					</td>
+					<td colspan="3">
+						<iframe src="http://fxsignals.fxmarketleaders.com/shortsignalsng.aspx" class="fxsignal fxsshort" id="fxsshort"></iframe>
+						<br/>
+						<iframe src="http://fxsignals.fxmarketleaders.com/Longsignalsng.aspx" class="fxsignal fxslong" id="fxslong"></iframe>	
+					
+					</td>
+					<td>
+						<!-- TradingView Widget BEGIN -->
+						<script type="text/javascript" src="https://d33t3vvu2t2yu5.cloudfront.net/tv.js"></script>
+						<script type="text/javascript">
+						new TradingView.widget({
+						  "autosize": true,
+						  "symbol": "FX:EURUSD",
+						  "interval": "60",
+						  "timezone": "UTC",
+						  "theme": "White",
+						  "style": "1",
+						  "toolbar_bg": "#f1f3f6",
+						  "withdateranges": true,
+						  "allow_symbol_change": true,
+						  "hideideas": true,
+						  "show_popup_button": true,
+						  "popup_width": "1000",
+						  "popup_height": "650"
+						});
+						</script>
+						<!-- TradingView Widget END -->
+
+					</td>
+					<td>
+
+						<iframe src="http://www.marketwatch.com/newsviewer" id="marketwatch" width="100%" height="100%" frameBorder="0" ></iframe>
+					</td>
+					<td></td>
+					
+				</tr>
+				<tr>
+					<td>
+						<a class="twitter-timeline" href="https://twitter.com/SignalFactory" data-widget-id="520545578501959680">Tweets by @SignalFactory</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</td>	
+					<td width="11%">
+						<a class="twitter-timeline" href="https://twitter.com/hashtag/EURUSD" data-widget-id="520555141225664512">#EURUSD Tweets</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>	
+
+					</td>
+					<td>
+						<a class="twitter-timeline" href="https://twitter.com/hashtag/GBPUSD" data-widget-id="520555843662520320">#GBPUSD Tweets</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					
+					</td>
+					<td>
+						<a class="twitter-timeline" href="https://twitter.com/MarketWatch" data-widget-id="520568670410383360">Tweets by @MarketWatch</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</td>
+					<td>
+						<iframe src="http://ec.forexprostools.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&category=_employment,_economicActivity,_inflation,_credit,_centralBanks,_confidenceIndex,_balance,_Bonds&importance=1,2,3&features=datepicker,timezone&countries=25,32,6,37,72,22,17,39,14,48,10,35,7,43,60,36,110,11,26,12,4,5&calType=week&timeZone=28&lang=1" width="636" height="467" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe><div class="poweredBy" style="font-family: Arial, Helvetica, sans-serif;"><span style="font-size: 11px;color: #333333;text-decoration: none;">Real Time Economic Calendar provided by <a href="http://www.Investing.com/" rel="nofollow" target="_blank" style="font-size: 11px;color: #06529D; font-weight: bold;" class="underline_link">Investing.com</a>.</span></div>
+					</td>
+					
+					<td>
+						<script src="http://www.reddit.com/r/forex.embed?limit=10" type="text/javascript"></script>
+					</td>
+				</tr>
+			</tbody>
+		</table>					
+
+		<script>
+			
+			var refresh_fxs = setInterval( function() {
+				
+				var iframe = document.getElementById('fxsshort');
+				iframe.src = iframe.src;
+
+				iframe = document.getElementById('fxslong');
+				iframe.src = iframe.src;
+
+
+			}, 60000 );
+
+			
+
+		</script>
+		
+
+	</body>
+</html>
