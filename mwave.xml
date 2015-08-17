@@ -3,14 +3,18 @@
   <meta>
   <author>Christian Heilmann</author>
   <description>HTML pages that need post data</description>
-  <sampleQuery><![CDATA[
+  <sampleQuery>
+    <![CDATA[
+
 select * from {table} where
 url='http://mwave.interest.me/mcountdown/vote/setVote.json' 
-and postdata="masterID=283&subID=48&voteIdx=13928" ]]></sampleQuery>
+and postdata="masterID=283&subID=48&voteIdx=13928" 
+
+]]></sampleQuery>
   <documentationURL></documentationURL>
   </meta>
   <bindings>
-    <select itemPath="" produces="XML">
+    <select itemPath="" produces="JSON">
     <urls>
       <url>{url}</url>
     </urls>
@@ -24,7 +28,7 @@ and postdata="masterID=283&subID=48&voteIdx=13928" ]]></sampleQuery>
       var data = myRequest.accept('text/html').
                  contentType("application/x-www-form-urlencoded").
                  post(postdata).response;
-      response.object = <postresult>{xdata}</postresult>;
+      response.object = <postresult>{data}</postresult>;
     ]]>
     </execute>
   </select> 
