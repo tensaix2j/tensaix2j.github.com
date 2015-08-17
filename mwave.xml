@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table xmlns="http://query.yahooapis.com/v1/schema/table.xsd">
+  <meta>
+  <author>Christian Heilmann</author>
+  <description>HTML pages that need post data</description>
+  <sampleQuery><![CDATA[
+select * from {table} where
+url='http://mwave.interest.me/mcountdown/vote/setVote.json' 
+and postdata="masterID=283&subID=48&voteIdx=13928" ]]></sampleQuery>
+  <documentationURL></documentationURL>
+  </meta>
+  <bindings>
+    <select itemPath="" produces="XML">
+    <urls>
+      <url>{url}</url>
+    </urls>
+    <inputs>
+      <key id="url" type="xs:string" required="true" paramType="variable"/>
+      <key id="postdata" type="xs:string" required="true" paramType="variable"/>
+    </inputs>
+    <execute>
+    <![CDATA[
+      var myRequest = y.rest(url);  
+      var data = myRequest.accept('text/html').
+                 contentType("application/x-www-form-urlencoded").
+                 post(postdata).response;
+      response.object = <postresult>{xdata}</postresult>;
+    ]]>
+    </execute>
+  </select> 
+  </bindings>
+</table>
