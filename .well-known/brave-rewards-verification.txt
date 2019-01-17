@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: tensaix2j.github.io
+Token: ceb378358fe9ea11737a08f1ede90538cb8395c7a828a42f39fc245c9bb6b508
