@@ -169,9 +169,20 @@
     </div>
     <div id="gameContainer"></div>
     <script>
-      window['staticWorld'] = true
+       const ws = new WebSocket("ws://18.141.193.4:8000");
+
+      ws.addEventListener('message', msg => {
+        console.log('Sending new message to engine.', msg.data)
+        if (msg.data === 'update') {
+          handleServerMessage({
+            type: 'update'
+          })
+        } else if (msg.data.startsWith('{')) {
+          handleServerMessage(JSON.parse(msg.data))
+        }
+      })
     </script>
   </body>
   <script src="unity/Build/DCLUnityLoader.js"></script>
-  <script defer async src="preview.js"></script>
+  <script defer async src="preview.js?v=1"></script>
 </html>

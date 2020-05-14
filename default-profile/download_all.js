@@ -19,7 +19,7 @@ const downloadFile = async (url, path) => {
   })
 }
 
-const catalog = require('./basecatalog.json')
+const catalog = require('./basecatalog.json?v=1.0')
 
 let contentPath
 try {
