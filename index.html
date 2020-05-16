@@ -169,7 +169,7 @@
     </div>
     <div id="gameContainer"></div>
     <script>
-       const ws = new WebSocket("ws://18.141.193.4:8000");
+       const ws = new WebSocket("wss://18.141.193.4:8000");
 
       ws.addEventListener('message', msg => {
         console.log('Sending new message to engine.', msg.data)
