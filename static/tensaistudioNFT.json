@@ -1,7 +1,10 @@
 {
     "name": "TensaiStudio",
+    "image": "https://tensaix2j.github.io/static/tensaistudioNFT.gif",
     "description": "TensaiStudio's First NFT",
-    "image": "https://tensaix2j.github.io/static/tensaistudioNFT.gif"
+    "attributes":[],
+    "external_url":"https://tensaix2j.github.io/static/tensaistudioNFT.json",
+    "background_color": "f3f3f3"
 }
 
 
