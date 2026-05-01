@@ -19,7 +19,7 @@ const PROJECTS = [
     title: "Puzzle Lab",
     sub: "Phaser.js · Three.js · HTML5",
     desc: "Explore a museum-like space in first person, where every exhibit is a puzzle waiting to be solved. Featuring 22 handcrafted challenges, the collection spans a variety of classic and original designs. Wander the halls, interact with each installation, and uncover solutions at your own pace in a calm, gallery-inspired setting.",
-    tags: ["threejs", "puzzle","first-person"],
+    tags: ["threejs", "3d", "puzzle","first-person", "javascript"],
     complexity: "high",
     thumbnail: "/thumbnails/puzzle_lab.png",
     url: "https://tensaix2j.github.io/puzzle_lab"
@@ -31,7 +31,7 @@ const PROJECTS = [
     title: "Crystal Maze",
     sub: "Phaser.js · Three.js · HTML5",
     desc: "Retro puzzle adventure: navigate vibrant grid mazes to collect crystals. Solve clever challenges with keys, switches, and strategy while avoiding traps and hazards. Perfect for fans of logic and nostalgic fun. There are 36 levels in total",
-    tags: ["threejs","puzzle","tile-grid", "sokoban"],
+    tags: ["threejs", "3d", "puzzle","tiled", "javascript"],
     complexity: "high",
     thumbnail: "/thumbnails/crystal_maze.png",
     url: "https://tensaix2j.github.io/crystal_maze"
@@ -43,7 +43,7 @@ const PROJECTS = [
     title: "Doge Warrior",
     sub: "Phaser.js · Tiled . HTML5",
     desc: "Doge Warrior is a platformer where you control a powerful doge exploring a trap-filled, mysterious labyrinth. It combines action and puzzles, letting you shoot Dogecoin to defeat enemies and solve challenges. As you progress, you unlock upgrades and face tougher obstacles that test your skill and strategy.",
-    tags: ["Platformer", "Action", "Puzzle"],
+    tags: ["platformer", "action", "puzzle","javascript"],
     complexity: "high",
     thumbnail: "/thumbnails/doge_warrior.png",
     url: "https://tensaix2j.github.io/dogewarrior"
@@ -54,7 +54,7 @@ const PROJECTS = [
     title: "Horseh Jump",
     sub: "Phaser.js · Three.js . HTML5",
     desc: "Hold to charge, release to leap! Guide the bespectacled horse scientist across precarious floating platforms over a breathtaking mountain chasm. Time your jumps perfectly to avoid the deadly drop—endless thrills await!",
-    tags: ["Platformer", "Single-Button"],
+    tags: ["platformer", "3d", "javascript"],
     complexity: "low",
     thumbnail: "/thumbnails/horseh_jump.png",
     url: "https://tensaix2j.itch.io/horseh_jump"
@@ -65,7 +65,7 @@ const PROJECTS = [
     title: "Horseh Run",
     sub: "Phaser.js · Three.js . HTML5",
     desc: "Race through a fast-paced obstacle course where your character runs nonstop and you must quickly jump or dodge incoming obstacles. As the speed increases over time, sharp reflexes and precise timing determine how long you can survive.",
-    tags: ["Platformer", "Single-Button"],
+    tags: ["platformer", "3d", "javascript"],
     complexity: "low",
     thumbnail: "/thumbnails/horseh_run.jpg",
     url: "https://tensaix2j.itch.io/horseh_run"
@@ -77,10 +77,22 @@ const PROJECTS = [
     title: "Roblox Crystal Maze",
     sub: "Roblox . LUA ",
     desc: "This is my attempt to create Crystal Maze in Roblox Game Engine using LUA scripting language",
-    tags: ["Platformer", "Single-Button"],
+    tags: ["roblox", "lua"],
     complexity: "low",
     thumbnail: "/thumbnails/roblox_crystal_maze.png",
     url: "https://www.roblox.com/games/93128275517682/Crystal-Maze"
+  },
+
+
+  {
+    id: 7, type: "game",
+    title: "Pico-8 Tiny Games",
+    sub: "Pico-8",
+    desc: "PICO-8 is a fantasy console that has only 16 colors and 128x128 pixels that runs LUA scripting language. Here are some of the games i created on Pico-8 published on Lexeloffle.com BBS.",
+    tags: ["pico-8", "lua"],
+    complexity: "low",
+    thumbnail: "/thumbnails/pico_8_games.png",
+    url: "https://www.lexaloffle.com/bbs/?uid=146165"
   },
   
 
@@ -89,19 +101,21 @@ const PROJECTS = [
     id: 7, type: "web",
     title: "TensaiStudio Portfolio",
     sub: "React.js",
-    desc: "A Portfolio of all games and websites created by me",
-    tags: ["TypeScript", "Reacj.js"],
+    desc: "This is a reactjs website vibe-coded to showcase a Portfolio of all games and websites created by me",
+    tags: ["typeScript", "react.js"],
     complexity: "low",
     thumbnail: "/thumbnails/tensaistudio.png",
+    url: "#top"
   },
   
 ];
 
+
 const SKILLS = [
-  { group: "Game Dev",  items: ["Phaser.js", "Three.js", "Unity" ] },
-  { group: "Frontend",  items: ["React.js", "TypeScript", "Three.js"] },
-  { group: "Backend",   items: ["Node.js", "PostgreSQL", "Ruby", "Python", "WebSockets"] },
-  { group: "Craft",     items: ["Blender3D" ] },
+  { group: "Game Dev",  items: ["Phaser.js", "Three.js", "LUA", "Unity" ] },
+  { group: "Frontend",  items: ["React.js", "TypeScript", "Javascript", "Three.js"] },
+  { group: "Backend",   items: ["Node.js", "PostgreSQL", "MongoDb", "WebSockets"] },
+  { group: "Craft",     items: ["Blender3D" , "Gimp" ] },
 ];
 
 /* ── Hooks ───────────────────────────────────────────── */
@@ -112,7 +126,7 @@ function useInView(threshold = 0.12) {
     const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVis(true); }, { threshold });
     if (ref.current) io.observe(ref.current);
     return () => io.disconnect();
-  }, []);
+  }, [ threshold ]);
   return [ref, vis];
 }
 
@@ -168,8 +182,10 @@ function Card({ project, delay }) {
   
   // Simple click handler
   const handleClick = () => {
-    if (project.url) {
+    if (project.url && !project.url.startsWith("#") ) {
       window.open(project.url, "_blank", "noopener,noreferrer");
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
@@ -402,8 +418,11 @@ export default function Portfolio() {
             maxWidth: "720px", marginBottom: "2rem",
             opacity: 0, animation: "fadeUp 0.7s ease 0.15s forwards",
           }}>
-            I build games,<br />
-            <em style={{ fontFamily: "'Lora', serif", fontWeight: 400, fontStyle: "italic", color: T.amber }}>websites,</em>
+            I build{" "} 
+            <em style={{ fontFamily: "'Lora', serif", fontWeight: 400, fontStyle: "italic", color: T.amber }}>
+                games,<br />
+                websites
+            </em>,
             {" "}and<br />whatever's interesting.
           </h1>
 
