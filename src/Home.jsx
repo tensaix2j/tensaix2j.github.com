@@ -1,54 +1,48 @@
 import React from "react";
 import ScrollIndicator from "./ScrollIndicator";
 import Particles from "./Particles";
+import HeroModels from "./HeroModels";
 import { ArrowRight, Code2, Gamepad2, Sparkles } from "lucide-react";
 
 const Home = () => {
   return (
     <>
-      <section className="relative h-screen overflow-hidden flex items-center justify-center text-black bg-[#f5f1ed]">
-        <div className="absolute inset-0 opacity-40">
-          <Particles
-            particleCount={120}
-            particleSpread={8}
-            particleColors={["#c8713b", "#151515", "#f4b860"]}
-            particleBaseSize={80}
-            alphaParticles
-            speed={0.18}
-          />
-        </div>
+      <section className="h-screen overflow-hidden flex items-center justify-center text-black bg-[#f5f1ed]">
+        
+        <div className="flex z-10 w-full max-w-6xl px-6 pt-24 ">
 
-        <div className="relative z-10 w-full max-w-6xl px-6 pt-24">
-          <div className="inline-flex items-center rounded-full border border-[#c8713b]/30 bg-white/60 px-4 py-2 text-sm font-medium text-[#7a3f20] shadow-sm backdrop-blur">
-            Open to work - Singapore
-          </div>
-          <ScrollIndicator />
+			<div className="">
+				<div className="inline-flex items-center rounded-full border border-[#c8713b]/30 bg-white/60 px-4 py-2 text-sm font-medium text-[#7a3f20] shadow-sm backdrop-blur">
+				Open to work - Singapore
+				</div>
+				<ScrollIndicator />
 
-          <h1 className="mt-8 max-w-4xl text-[clamp(3rem,9vw,7rem)] font-black leading-[0.95] tracking-normal">
-            I build games, websites, and whatever's interesting.
-          </h1>
+				<h1 className="mt-8 max-w-4xl text-[clamp(3rem,7vw,5rem)] font-black leading-[0.95] tracking-normal md:max-w-[58%]">
+				I build games, websites, and whatever's interesting.
+				</h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-700">
-            TensaiStudio is the portfolio of a Singapore-based full stack developer
-            making playful web experiences, polished interfaces, and small games
-            with memorable interactions.
-          </p>
+				<p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-700 md:max-w-[52%]">
+				TensaiStudio is the portfolio of a Singapore-based full stack developer
+				making playful web experiences, polished interfaces, and small games
+				with memorable interactions.
+				</p>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="/projects"
-              className="inline-flex items-center gap-2 rounded-full bg-black px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#c8713b]"
-            >
-              View projects <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href="https://github.com/tensaix2j"
-              className="inline-flex items-center gap-2 rounded-full border border-zinc-300 bg-white/70 px-5 py-3 text-sm font-semibold text-zinc-900 transition hover:border-[#c8713b] hover:text-[#c8713b]"
-            >
-              GitHub
-            </a>
-          </div>
-        </div>
+				<div className="mt-8 flex flex-wrap gap-3">
+					<a
+						href="/projects"
+						className="inline-flex items-center gap-2 rounded-full bg-black px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#c8713b]"
+					>
+						View projects <ArrowRight className="h-4 w-4" />
+					</a>
+				</div>
+			</div>
+		    <div className="pointer-events-none relative">
+				<div className="absolute -translate-x-[50vw] -translate-y-[6vw]  w-[50vw] h-[50vw]  z-[-4000]">
+          			<HeroModels />
+				</div>
+        	</div>
+		</div>
+		
       </section>
 
       <section className="bg-[#c8713b] px-6 py-20 text-white">
