@@ -4,7 +4,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 const MODEL_PATHS = ["/models/board.glb", "/models/logo_l.glb", "/models/logo_r.glb" ];
 
-export default function HeroModels() {
+export default function ThreeDisplay() {
 
 	const containerRef = useRef(null);
 	let scrollY = 0;
@@ -45,8 +45,8 @@ export default function HeroModels() {
 
 		const scene = new THREE.Scene();
 		const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 1000);
-		camera.position.set(-3, 3, 3);
-		camera.lookAt(0,0,0);
+		camera.position.set(-4, 3, 3);
+		camera.lookAt(-1,0,0);
 
 		const renderer = new THREE.WebGLRenderer({
 			antialias: true,
@@ -79,9 +79,11 @@ export default function HeroModels() {
 		let frameId;
 
 		const resize = () => {
-			const { width, height } = container.getBoundingClientRect();
+            const { width, height } = container.getBoundingClientRect();
+
 			renderer.setSize(width, height, false);
-			camera.aspect = width / height || 1;
+            //camera.aspect = width / height || 1;
+            camera.aspect = 1;
 			camera.updateProjectionMatrix();
 		};
 

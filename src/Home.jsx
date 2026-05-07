@@ -1,7 +1,7 @@
 import React from "react";
 import ScrollIndicator from "./ScrollIndicator";
 import Particles from "./Particles";
-import HeroModels from "./HeroModels";
+import ThreeDisplay from "./ThreeDisplay";
 import { ArrowRight, Code2, Gamepad2, Sparkles } from "lucide-react";
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <section className="h-screen overflow-hidden flex items-center justify-center text-black bg-[#f5f1ed]">
         
-        <div className="flex z-10 w-full max-w-6xl px-6 pt-24 ">
+        <div className="z-10 w-full max-w-6xl px-6 pt-24 relative">
 
 			<div className="">
 				<div className="inline-flex items-center rounded-full border border-[#c8713b]/30 bg-white/60 px-4 py-2 text-sm font-medium text-[#7a3f20] shadow-sm backdrop-blur">
@@ -36,10 +36,8 @@ const Home = () => {
 					</a>
 				</div>
 			</div>
-		    <div className="pointer-events-none relative">
-				<div className="absolute -translate-x-[50vw] -translate-y-[6vw]  w-[50vw] h-[50vw]  z-[-4000]">
-          			<HeroModels />
-				</div>
+		    <div className="pointer-events-none absolute top-0 left-0 z-[-40] w-[100%] aspect-square">
+          		<ThreeDisplay />				
         	</div>
 		</div>
 		
