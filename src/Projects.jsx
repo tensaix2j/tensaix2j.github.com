@@ -97,6 +97,19 @@ const PROJECTS = [
   },
   {
     id: 9,
+    type: "web",
+    title: "FindPathSG",
+    sub: "React.js · Mapbox.js",
+    desc: "This project is an experiment in implementing the A* pathfinding algorithm to Singapore’s bus network. It calculates paths between a selected start and end point. It also provides information on which buses # to transfer between along the route.",
+    tags: ["javascript", "react.js", "tailwindcss", "mapbox", "geojson"],
+    complexity: "high",
+    thumbnail: "/thumbnails/findpathsg.jpg",
+    url: "https://tensaix2j.github.io/findpathsg",
+  },
+
+
+  {
+    id: 10,
     type: "Game",
     title: "Telegram Minigames",
     sub: "Telegram",
