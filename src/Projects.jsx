@@ -3,12 +3,39 @@ import { ArrowUpRight, ExternalLink, X } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 
 const PROJECTS = [
+
+  {
+    id: 9,
+    type: "web",
+    title: "TensaiGrocer",
+    sub: "Next.js · MongoDB · TailwindCSS" ,
+    desc: "A website I made with Next.js and MongoDb hosted on Vercel. It features catalogues of over 22,000 items scraped from local groceries store websites. The database is indexed for search optimization. The catalogues are incrementally loaded for each category of items. Dark and Light Visual Theme modes are also implemented along with Responsive design NavBar and Sidebar. It was created as an exercise to use Next.js, MongoDB, TailwindCSS, JWT.",
+    tags: ["next.js", "react.js", "tailwindcss"],
+    complexity: "high",
+    thumbnail: "/thumbnails/tensaigrocer.jpg",
+    url: "https://tensaigrocer.vercel.app",
+  },
+
+
+  {
+    id: 10,
+    type: "web",
+    title: "FindPathSG",
+    sub: "React.js · Mapbox.js",
+    desc: "This project I created as an experiment to implement the A* pathfinding algorithm to Singapore’s bus network. It calculates paths between a selected start and end point. It also provides information on which buses # to transfer between along the route.",
+    tags: ["javascript", "react.js", "tailwindcss", "mapbox", "geojson"],
+    complexity: "high",
+    thumbnail: "/thumbnails/findpathsg.jpg",
+    url: "https://tensaix2j.github.io/findpathsg",
+  },
+  
+  
   {
     id: 1,
     type: "game",
     title: "Puzzle Lab",
     sub: "Phaser.js · Three.js · HTML5",
-    desc: "This is a game created using Three.js and Javascript. The game is about exploring a museum-like space in first person, where every exhibit is a puzzle waiting to be solved. Featuring 22 handcrafted challenges, the collection spans a variety of classic and original designs. Wander the halls, interact with each installation, and uncover solutions at your own pace in a calm, gallery-inspired setting.",
+    desc: "This is a game I created using Three.js and Javascript. The game is about exploring a museum-like space in first person, where every exhibit is a puzzle waiting to be solved. Featuring 22 handcrafted challenges, the collection spans a variety of classic and original designs. Wander the halls, interact with each installation, and uncover solutions at your own pace in a calm, gallery-inspired setting.",
     tags: ["threejs", "3d", "puzzle", "first-person", "javascript"],
     complexity: "high",
     thumbnail: "/thumbnails/puzzle_lab.jpg",
@@ -19,7 +46,7 @@ const PROJECTS = [
     type: "game",
     title: "Crystal Maze",
     sub: "Phaser.js · Three.js · HTML5",
-    desc: "This is another complex games created using Three.js and Javascript. It is a retro puzzle adventure based on an old Windows game, Chip Challenge. Players have to navigate vibrant grid mazes to collect crystals. Solve clever challenges with keys, switches, and strategy while avoiding traps and hazards. Perfect for fans of logic and nostalgic fun. There are 36 levels in total.",
+    desc: "This is another complex games I created using Three.js and Javascript. It is a retro puzzle adventure based on an old Windows game, Chip Challenge. Players have to navigate vibrant grid mazes to collect crystals. Solve clever challenges with keys, switches, and strategy while avoiding traps and hazards. Perfect for fans of logic and nostalgic fun. There are 36 levels in total.",
     tags: ["threejs", "3d", "puzzle", "tiled", "javascript"],
     complexity: "high",
     thumbnail: "/thumbnails/crystal_maze.jpg",
@@ -30,7 +57,7 @@ const PROJECTS = [
     type: "game",
     title: "Doge Warrior",
     sub: "Phaser.js · Tiled · HTML5",
-    desc: "This is a game created using Phaser.js. Doge Warrior is a platformer where you control a powerful doge exploring a trap-filled, mysterious labyrinth. It combines action and puzzles, letting you shoot Dogecoin to defeat enemies and solve challenges. As you progress, you unlock upgrades and face tougher obstacles that test your skill and strategy.",
+    desc: "This is a game I created using Phaser.js. Doge Warrior is a platformer where you control a powerful doge exploring a trap-filled, mysterious labyrinth. It combines action and puzzles, letting you shoot Dogecoin to defeat enemies and solve challenges. As you progress, you unlock upgrades and face tougher obstacles that test your skill and strategy.",
     tags: ["platformer", "action", "puzzle", "javascript"],
     complexity: "high",
     thumbnail: "/thumbnails/doge_warrior.jpg",
@@ -41,7 +68,7 @@ const PROJECTS = [
     type: "game",
     title: "Horseh Jump",
     sub: "Phaser.js · Three.js · HTML5",
-    desc: "This is another mini game created using Phaser and Three.js. Phaser for the UI, Three.js for the 3D. Hold to charge, release to leap. Guide the bespectacled horse scientist across precarious floating platforms over a breathtaking mountain chasm. Time your jumps perfectly to avoid the deadly drop, with endless thrills awaiting every run.",
+    desc: "This is another mini game I created using Phaser and Three.js. Phaser for the UI, Three.js for the 3D. Hold to charge, release to leap. Guide the bespectacled horse scientist across precarious floating platforms over a breathtaking mountain chasm. Time your jumps perfectly to avoid the deadly drop, with endless thrills awaiting every run.",
     tags: ["three.js", "3d", "javascript", "phaser.js"],
     complexity: "low",
     thumbnail: "/thumbnails/horseh_jump.jpg",
@@ -52,7 +79,7 @@ const PROJECTS = [
     type: "game",
     title: "Horseh Run",
     sub: "Phaser.js · Three.js · HTML5",
-    desc: "This is also another mini game created using Phaser and Three.js. Phaser for the UI, Three.js for the 3D. Race through a fast-paced obstacle course where your character runs nonstop and you must quickly jump or dodge incoming obstacles. As the speed increases over time, sharp reflexes and precise timing determine how long you can survive.",
+    desc: "This is also another mini game I created using Phaser and Three.js. Phaser for the UI, Three.js for the 3D. Race through a fast-paced obstacle course where your character runs nonstop and you must quickly jump or dodge incoming obstacles. As the speed increases over time, sharp reflexes and precise timing determine how long you can survive.",
     tags: ["three.js", "3d", "javascript", "phaser.js"],
     complexity: "low",
     thumbnail: "/thumbnails/horseh_run.jpg",
@@ -73,7 +100,7 @@ const PROJECTS = [
     id: 7,
     type: "game",
     title: "Pico-8 Tiny Games",
-    sub: "Pico-8",
+    sub: "Pico-8 · Lua",
     desc: "PICO-8 is a fantasy console that has only 16 colors and 128x128 pixels and runs the Lua scripting language. Here are some of the games I created on Pico-8, published on the Lexaloffle BBS.",
     tags: ["pico-8", "lua"],
     complexity: "low",
@@ -88,31 +115,22 @@ const PROJECTS = [
     id: 8,
     type: "web",
     title: "TensaiStudio Portfolio",
-    sub: "React.js",
-    desc: "This is a React.js website semi vibe-coded to showcase a portfolio of all games and websites created by me. The project was initially hand-coded for some basic ReactJS web structures before being fully vibe coded using Codex to fill up the flesh of the site.",
-    tags: ["typescript", "react.js", "tailwindcss"],
+    sub: "React.js · TailwindCSS",
+    desc: "This is a React.js website I semi vibe-coded to showcase a portfolio of all games and websites created by me. The project was initially hand-coded for some basic ReactJS web structures before being fully vibe coded using Codex to fill up the flesh of the site.",
+    tags: ["typescript", "react.js", "tailwindcss" , "github pages"],
     complexity: "low",
     thumbnail: "/thumbnails/tensaistudio.jpg",
     url: "https://tensaix2j.github.io",
   },
-  {
-    id: 9,
-    type: "web",
-    title: "FindPathSG",
-    sub: "React.js · Mapbox.js",
-    desc: "This project is an experiment in implementing the A* pathfinding algorithm to Singapore’s bus network. It calculates paths between a selected start and end point. It also provides information on which buses # to transfer between along the route.",
-    tags: ["javascript", "react.js", "tailwindcss", "mapbox", "geojson"],
-    complexity: "high",
-    thumbnail: "/thumbnails/findpathsg.jpg",
-    url: "https://tensaix2j.github.io/findpathsg",
-  },
+
+  
 
 
   {
-    id: 10,
+    id: 20,
     type: "Game",
     title: "Telegram Minigames",
-    sub: "Telegram",
+    sub: "Telegram Bot API · Phaser.js",
     desc: "I made over 40 telegram minigames using Phaser.js on comissioned work for a company known as LuckyMiuuu games. ",
     tags: ["javascript", "phaser.js", "three.js", "telegram"],
     complexity: "low",
@@ -220,11 +238,11 @@ const Projects = () => {
                 Selected work
               </p>
               <h1 className="mt-3 text-[clamp(2.7rem,8vw,6rem)] font-black leading-none">
-                Games and web projects.
+                My Web and Game projects.
               </h1>
               <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-700">
-                A growing collection of playable experiments, puzzle games,
-                platformers, Roblox builds, Telegram Minigames, Pico-8 releases, and the portfolio
+                A growing portfolio of my web designs, experiments, algorithms, 3D web games,
+                platformers, puzzle games, Roblox builds, Telegram Minigames, Pico-8 releases, and the portfolio
                 site that brings them together.
               </p>
             </div>

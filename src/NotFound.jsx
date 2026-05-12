@@ -6,7 +6,7 @@ const NotFound = () => {
         <section className="h-screen flex-col flex">
 
             <div className="flex-1 flex items-center justify-center text-2xl">
-                The request resource is Not Found.
+                The requested resource is Not Found.
             </div>
             
         </section>
