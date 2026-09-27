@@ -5,6 +5,19 @@ import { FaGithub } from "react-icons/fa";
 const PROJECTS = [
 
   {
+    id: 11,
+    type: "web",
+    title: "Personal Tradingview",
+    sub: "React.js · Mapbox.js",
+    desc: "This project is created to save $240 per year from tradingview.com simply because i need to have more than 50 tickers on my watchlist without paying. It uses localcache for the watchlist. Tickers data composed of data from Binance, MEXC, finnhub and CMC.",
+    tags: ["javascript", "react.js", "localcache"],
+    complexity: "high",
+    thumbnail: "/thumbnails/tradingview.jpg",
+    url: "https://tensaix2j.github.io/tradingview",
+  },
+
+
+  {
     id: 9,
     type: "web",
     title: "TensaiGrocer",
