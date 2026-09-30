@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
@@ -9,8 +10,12 @@ import "./index.css"
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { setVisitor } from "./visitorTracking";
 
 function App() {
+	useEffect(() => {
+		void setVisitor();
+	}, []);
 
 	return (
 		<>
