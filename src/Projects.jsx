@@ -5,10 +5,35 @@ import { FaGithub } from "react-icons/fa";
 const PROJECTS = [
 
   {
+    id: 13,
+    type: "web",
+    title: "Blockfolio",
+    sub: "React.js",
+    desc: "This project is a simple blockfolio that can quickly track your crypto possessions in USD or SGD equivalent. Can import and export. Using localcache for data storage.",
+    tags: ["javascript", "react.js", "localcache"],
+    complexity: "high",
+    thumbnail: "/thumbnails/blockfolio.jpg",
+    url: "https://tensaix2j.github.io/blockfolio/",
+  },
+
+  {
+    id: 12,
+    type: "web",
+    title: "Chinese Calendar 农历",
+    sub: "React.js",
+    desc: "This project is a Chinese Calendar that can quickly show 四柱， 节气， 天干地支 without having to wait several seconds for ads like most Chinese Calendar apps in the wild.",
+    tags: ["javascript", "react.js", "localcache"],
+    complexity: "high",
+    thumbnail: "/thumbnails/nongli.jpg",
+    url: "https://tensaix2j.github.io/nongli/",
+  },
+
+
+  {
     id: 11,
     type: "web",
     title: "Personal Tradingview",
-    sub: "React.js · Mapbox.js",
+    sub: "React.js",
     desc: "This project is created to save $240 per year from tradingview.com simply because i need to have more than 50 tickers on my watchlist without paying. It uses localcache for the watchlist. Tickers data composed of data from Binance, MEXC, finnhub and CMC.",
     tags: ["javascript", "react.js", "localcache"],
     complexity: "high",
